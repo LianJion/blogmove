@@ -1,0 +1,59 @@
+.finaldemo,.mask,.border{
+	width:300px;
+	height:300px;
+}
+
+.finaldemo{
+	margin:40px auto;
+	display:block;
+	position:relative;
+
+}
+.border{
+	position:absolute;
+	top:0;
+	left:0;
+	border:10px solid orange;
+	border-top-color:blue;
+	border-left-color:blue;
+	border-radius:100%;
+	box-sizing:border-box;
+	transition:all 0.5s ease-in-out;
+}
+
+.mask{
+	position:absolute;
+	top:0;
+	left:0;
+	border-radius:100%;
+	transition:all 0.5s ease-in-out;
+	color:rgba(255,255,255,0);
+	/*这里的颜色包括了字体，遮罩和字的颜色是一样的*/
+}
+img{
+	width:300px;
+	height:300px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	border-radius:100%;
+}
+.info{
+	position:absolute;
+	top:35%;
+	left:0;
+	width:100%;
+	text-align:center;
+	/*transform:translateY(-50%);/*
+	/*向上移动起的是一个定位的作用*/
+}
+
+/*遮罩的作用，hover后背景颜色变了，白字就显现了*/
+.mask:hover{
+	background-color:rgba(0,0,0,1.0);
+	color:rgba(255,255,255,1);
+}
+
+.border:hover {
+	transform:rotate(180deg);
+}
